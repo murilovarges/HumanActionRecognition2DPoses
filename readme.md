@@ -10,7 +10,7 @@ M. Varges and A. N. Marana. **Human Action Recognition using 2D Poses.** 8th Bra
 @inproceedings{har2dposes_bracis2019,
     title = {Human Action Recognition using 2D Poses},
     author = {Murilo Varges da Silva and Aparecido Nilceu Marana.},
-    booktitle = {BRACIS},
+    booktitle = {Brazilian Conference on Intelligent Systems (BRACIS)},
     year = 2019
 }
 ```

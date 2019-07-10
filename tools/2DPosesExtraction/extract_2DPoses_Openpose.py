@@ -2,48 +2,49 @@
 # Author.: Murilo
 # Date...: 09/28/2018
 
-import glob, os
+import argparse
+import glob
+import os
 
-videosDir = "/home/murilo/dataset/KTH/VideosTrainValidationTest"
-os.chdir("/home/murilo/openpose")
+
+def extract_2d_poses(args):
+    os.chdir(args.open_pose_base_dir)
+    for file in glob.glob(os.path.join(args.videos_base_dir, "**/*.avi"), recursive=True):
+        base_video_name = os.path.splitext(os.path.basename(file))[0]
+        print(file)
+
+        poses_path = os.path.join(args.poses_base_dir,os.path.basename(os.path.dirname(file)), base_video_name)
+        print(poses_path)
+        if not os.path.exists(poses_path):
+            os.makedirs(poses_path)
+
+        os.system(
+            "build/examples/openpose/openpose.bin --display 0 --video " + file
+            + " --write_json " + poses_path + " --disable_blending --render_pose 0")
 
 
 def main():
-    for file in glob.glob(os.path.join(videosDir, "**/*.avi"), recursive=True):
-        baseVideoName = os.path.splitext(os.path.basename(file))[0]
-        print(file)
-        '''
-      newFileName = file.replace("VideosTrainValidationTest", "VideosTrainValidationTestOP")	
-      print(newFileName)
+    parser = argparse.ArgumentParser(
+        description="Compute features from Hough Points to Human Action Recognition"
+    )
 
-      newFilePath =  os.path.dirname(os.path.abspath(newFileName))	
-      if not os.path.exists(newFilePath):
-         os.makedirs(newFilePath)
+    parser.add_argument("--videos_base_dir", type=str,
+                        default='/home/murilo/dataset/KTH/VideosTrainValidationTest',
+                        help="Name of directory where videos are located.")
 
-      os.system("build/examples/openpose/openpose.bin --display 0 --video "+file +" --write_video " + newFileName)
-      '''
-        # here generate skeletons with black background
-        newFileName = file.replace("VideosTrainValidationTest", "VideosTrainValidationTestOPBlack")
-        print(newFileName)
+    parser.add_argument("--open_pose_base_dir", type=str,
+                        default='/home/murilo/openpose',
+                        help="Name of directory where Openpose is located.")
 
-        newFilePath = os.path.dirname(os.path.abspath(newFileName))
-        if not os.path.exists(newFilePath):
-            os.makedirs(newFilePath)
+    parser.add_argument("--poses_base_dir", type=str,
+                        default='/home/murilo/dataset/KTH/2DPoses',
+                        help="Name of directory to output computed 2D poses.")
 
-        keysPath = file[:-4]
-        keysPath = keysPath.replace("VideosTrainValidationTest", "VideosTrainValidationTestOPKeys")
-        print(keysPath)
-        if not os.path.exists(keysPath):
-            os.makedirs(keysPath)
+    args = parser.parse_args()
 
-        framesPath = file[:-4]
-        framesPath = framesPath.replace("VideosTrainValidationTest", "VideosTrainValidationTestOPFrames")
-        print(framesPath)
-        if not os.path.exists(framesPath):
-            os.makedirs(framesPath)
+    print(args)
 
-        os.system(
-            "build/examples/openpose/openpose.bin --display 0 --video " + file + " --write_video " + newFileName + " --write_images " + framesPath + " --write_json " + keysPath + " --disable_blending")
+    extract_2d_poses(args)
 
 
 if __name__ == "__main__":
