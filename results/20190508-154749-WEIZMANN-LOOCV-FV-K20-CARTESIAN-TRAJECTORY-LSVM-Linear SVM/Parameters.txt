@@ -1,0 +1,13 @@
+Parameters
+Test Name: WEIZMANN-LOOCV-FV-K20-CARTESIAN-TRAJECTORY-LSVM
+Base Path: /home/murilo/dataset/Weizmann/Videos_trajectory_from_body_parts_l20_s1
+Base Path2: None
+Train Path: None
+Test Path: None
+Label Path: /home/murilo/dataset/Weizmann/class_names.txt
+Scaler Cluster Type: ScalerType.StandardScaler
+Scaler Type: ScalerType.StandardScaler
+k: 20
+Nr. Samples: None
+Classifier Parameters
+None

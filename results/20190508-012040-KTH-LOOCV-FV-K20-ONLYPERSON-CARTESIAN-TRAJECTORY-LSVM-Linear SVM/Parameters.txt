@@ -1,0 +1,13 @@
+Parameters
+Test Name: KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-TRAJECTORY-LSVM
+Base Path: /home/murilo/dataset/KTH/VideosTrainValidationTest_trajectory_person_l20_s10_all
+Base Path2: None
+Train Path: None
+Test Path: None
+Label Path: /home/murilo/dataset/KTH/class_names.txt
+Scaler Cluster Type: ScalerType.StandardScaler
+Scaler Type: ScalerType.StandardScaler
+k: 20
+Nr. Samples: None
+Classifier Parameters
+None

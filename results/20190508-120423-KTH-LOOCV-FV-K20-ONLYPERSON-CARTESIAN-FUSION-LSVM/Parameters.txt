@@ -1,0 +1,16 @@
+Parameters
+Test Name: KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-FUSION-LSVM
+Base Path: /home/murilo/dataset/KTH/VideosTrainValidationTest_Hough_Features_BAS_BOW_diff_person
+Base Path2: /home/murilo/dataset/KTH/VideosTrainValidationTest_trajectory_person_l20_s10_all
+Train Path: None
+Test Path: None
+Label Path: /home/murilo/dataset/KTH/class_names.txt
+Scaler Cluster Type: ScalerType.StandardScaler
+Scaler Type: ScalerType.StandardScaler
+k: 20
+Nr. Samples: None
+Classifier Parameters
+LinearSVC(C=1, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l2', random_state=0, tol=0.0001,
+     verbose=0)

@@ -1,0 +1,15 @@
+----------------------------------------------------------- START 08/05  --------------------------------------------------------------
+-- Angles Body Parts
+/home/murilo/PycharmProjects/VideosClassification/venv/bin/python /home/murilo/PycharmProjects/OpenPoseHough/tools/Cartesian_Points/compute_angles_from_body_parts.py \
+--points_base_dir=/home/murilo/dataset/Weizmann \
+--input_dir=Videos_OP_PartKeys \
+--output_dir=Videos_angles_from_body_parts
+
+
+-- Trajectory Body Parts
+/home/murilo/PycharmProjects/VideosClassification/venv/bin/python /home/murilo/PycharmProjects/OpenPoseHough/tools/Cartesian_Points/compute_trajectory_from_body_parts.py \
+--points_base_dir=/home/murilo/dataset/Weizmann \
+--input_dir=Videos_OP_PartKeys \
+--output_dir=Videos_trajectory_from_body_parts_l20_s1 \
+--number_frames=20 --stride=1
+

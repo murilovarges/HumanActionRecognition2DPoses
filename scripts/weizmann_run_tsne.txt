@@ -1,0 +1,16 @@
+----------------------------------------------------------- START 08/05  --------------------------------------------------------------
+-- TSNE
+/home/murilo/PycharmProjects/VideosClassification/venv/bin/python /home/murilo/PycharmProjects/VideosClassification/TSNE/tsne_new.py \
+--base_path=/home/murilo/dataset/Weizmann/Videos_angles_from_body_parts \
+--base_path2=/home/murilo/dataset/Weizmann/Videos_trajectory_from_body_parts_l20_s1 \
+--label_path=/home/murilo/dataset/Weizmann/class_names.txt \
+--output_features=/home/murilo/PycharmProjects/VideosClassification/TSNE/wvc_images_weizmann/data.csv \
+--output_image=/home/murilo/PycharmProjects/VideosClassification/TSNE/wvc_images_weizmann
+
+
+--base_path=/home/murilo/dataset/KTH/VideosTrainValidationTest_Hough_Features_BAS_BOW_diff_person
+--base_path2=/home/murilo/dataset/KTH/VideosTrainValidationTest_trajectory_person_l20_s10_all
+--label_path=/home/murilo/dataset/KTH/class_names.txt
+--output_features=/home/murilo/PycharmProjects/VideosClassification/TSNE/wvc_images/data.csv
+--output_image=/home/murilo/PycharmProjects/VideosClassification/TSNE/wvc_images
+
