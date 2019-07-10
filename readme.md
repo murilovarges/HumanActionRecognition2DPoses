@@ -1,7 +1,5 @@
 # Human Action Recognition using 2D Poses (HAR2dPoses)
 
-![r2plus1d1](https://raw.githubusercontent.com/dutran/R2Plus1D/master/r2plus1d.png)
-
 [[project page](http://recogna.tech/)] [[paper](https://scholar.google.com.br/citations?user=aMgln1gAAAAJ&hl=en)]
 
 If you find this work helpful for your research, please cite our following paper:
@@ -10,7 +8,7 @@ M. Varges and A. N. Marana. **Human Action Recognition using 2D Poses.** 8th Bra
 
 ```
 @inproceedings{har2dposes_bracis2019,
-    title = {A Closer Look at Spatiotemporal Convolutions for Action Recognition},
+    title = {Human Action Recognition using 2D Poses},
     author = {Murilo Varges da Silva and Aparecido Nilceu Marana.},
     booktitle = {BRACIS},
     year = 2019
@@ -26,12 +24,11 @@ HAR2dPoses requires the following dependencies:
 
 ## Tutorials
 We provide some basic tutorials for you to get familar with the code and tools.
-* [Installation Guide](tutorials/Installation_guide.md)
-* [Training Kinetics from scratch](tutorials/kinetics_train.md)
-* [Finetuning R(2+1)D on HMDB51](tutorials/hmdb51_finetune.md)
-* [Dense prediction](tutorials/dense_prediction.md)
-* [Feature extraction](tutorials/feature_extraction.md)
-* [Download and evaluate pre-trained models](tutorials/models.md)
+* [2D Poses Extraction](tutorials/2DPoses_extraction.md)
+* [Features Extraction](tutorials/features_extraction.md)
+* [Human Action Classification](tutorials/classification.md)
+* [Features Embedding Visualization](tutorials/visualization.md)
+* [Download 2D poses](tutorials/2DPoses.md)
 
 
 ## License
