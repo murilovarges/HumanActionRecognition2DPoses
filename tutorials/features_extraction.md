@@ -18,7 +18,7 @@ python tools/Cartesian_Points/compute_angles_from_body_parts.py \
 --output_dir=Angles_from_2d_poses
 ```
 
-## Computing Trajectiories Features
+## Computing Trajectories Features
 
 ```
 python tools/Cartesian_Points/compute_trajectory_from_body_parts.py \
