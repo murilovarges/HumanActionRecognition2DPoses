@@ -34,6 +34,8 @@ In this example, we assume that you would to extract 2D poses from the videos as
 /your_path/kth_dataset/walking/person02_walking_d2_uncomp.avi
 
 
+
+## Extracting 2D Poses using Openpose
 In this example, we will extract 2D poses for the above-mentioned videos.
 
 
