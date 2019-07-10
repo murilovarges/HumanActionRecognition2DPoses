@@ -10,6 +10,7 @@ Experiments were performed in two public dataset [KTH](http://www.nada.kth.se/cv
 In this example, we will perform classificarion using extracted features from 2D poses by running the following scripts.
 
 ## Classification Using Only Angles Features
+
 ```
 python /home/murilo/PycharmProjects/VideosClassification/BOW/MainHumanActionClassification.py \
 --test_name=KTH-LOOCV-FV-K20-ANGLES-LSVM \
@@ -18,6 +19,7 @@ python /home/murilo/PycharmProjects/VideosClassification/BOW/MainHumanActionClas
 ```
 
 ## Classification Using Only Trajectories Features
+
 ```
 python /home/murilo/PycharmProjects/VideosClassification/BOW/MainHumanActionClassification.py \
 --test_name=KTH-LOOCV-FV-K20-TRAJECTORY-LSVM \
@@ -27,6 +29,7 @@ python /home/murilo/PycharmProjects/VideosClassification/BOW/MainHumanActionClas
 
 
 ## Classification Using Fusion of Angles and Trajectories Features
+
 ```
 python /home/murilo/PycharmProjects/VideosClassification/BOW/MainHumanActionClassification.py \
 --test_name=KTH-LOOCV-FV-K20-FUSION-LSVM \
