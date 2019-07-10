@@ -36,6 +36,7 @@ In this example, we assume that you would to extract 2D poses from the videos as
 
 In this example, we will extract 2D poses for the above-mentioned videos.
 
+
 ```
 python tools/2DPosesExtraction/extract_2DPoses_Openpose.py \
 --videos_base_dir=/home/murilo/dataset/KTH/VideosTrainValidationTest \

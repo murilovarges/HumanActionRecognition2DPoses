@@ -20,7 +20,7 @@ def extract_2d_poses(args):
 
         os.system(
             "build/examples/openpose/openpose.bin --display 0 --video " + file
-            + " --write_json " + poses_path + " --disable_blending --render_pose 0")
+            + " --write_json " + poses_path + " --part_candidates --disable_blending --render_pose 0")
 
 
 def main():
