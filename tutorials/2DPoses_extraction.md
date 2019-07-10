@@ -12,27 +12,35 @@ In this example, we assume that you would to extract 2D poses from the videos as
 
 /your_path/kth_dataset/boxing/person02_boxing_d1_uncomp.avi
 /your_path/kth_dataset/boxing/person02_boxing_d2_uncomp.avi
+
 ...
-...
+
 /your_path/kth_dataset/handclapping/person02_handclapping_d1_uncomp.avi
 /your_path/kth_dataset/handclapping/person02_handclapping_d2_uncomp.avi
+
 ...
-...
+
+
 /your_path/kth_dataset/handwaving/person02_handwaving_d1_uncomp.avi
 /your_path/kth_dataset/handwaving/person02_handwaving_d2_uncomp.avi
+
 ...
-...
+
 /your_path/kth_dataset/jogging/person02_jogging_d1_uncomp.avi
 /your_path/kth_dataset/jogging/person02_jogging_d2_uncomp.avi
+
+
 ...
-...
+
 /your_path/kth_dataset/running/person02_running_d1_uncomp.avi
 /your_path/kth_dataset/running/person02_running_d2_uncomp.avi
+
 ...
-...
+
 /your_path/kth_dataset/walking/person02_walking_d1_uncomp.avi
 /your_path/kth_dataset/walking/person02_walking_d2_uncomp.avi
 
+...
 
 
 ## Extracting 2D Poses using Openpose
