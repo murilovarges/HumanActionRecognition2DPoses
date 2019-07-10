@@ -1,7 +1,3 @@
-# Program to export Openpose files from videos
-# Author.: Murilo
-# Date...: 09/28/2018
-
 import argparse
 import glob
 import os

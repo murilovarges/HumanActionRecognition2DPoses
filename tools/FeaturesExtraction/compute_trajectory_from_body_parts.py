@@ -1,7 +1,3 @@
-# Description..: Read Openpose json files with body parts
-# Date.........: 10/04/2019
-# Author.......: Murilo Varges da Silva
-
 import glob
 import json
 import os

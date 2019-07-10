@@ -1,7 +1,3 @@
-# Description..: Read Openpose json files with body parts
-# Date.........: 12/11/2018
-# Author.......: Murilo Varges da Silva
-
 import glob
 from Enumerators import BodyStraight
 import json
