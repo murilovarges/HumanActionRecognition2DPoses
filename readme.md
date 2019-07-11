@@ -2,6 +2,8 @@
 
 [[Research Group Page](http://recogna.tech/)] [[Paper Link](https://scholar.google.com.br/citations?user=aMgln1gAAAAJ&hl=en)]
 
+![r2plus1d1](https://raw.githubusercontent.com/murilovarges/HumanActionRecognition2DPoses/master/har2dposes.png)
+
 If you find this work helpful for your research, please cite our following paper:
 
 M. Varges and A. N. Marana. **Human Action Recognition using 2D Poses.** 8th Brazilian Conference on Intelligent Systems (BRACIS), 2019.
