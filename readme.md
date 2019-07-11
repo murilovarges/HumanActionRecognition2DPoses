@@ -4,6 +4,11 @@
 
 ![architeture_har](https://raw.githubusercontent.com/murilovarges/HumanActionRecognition2DPoses/master/architeture_har.png)
 
+## Abstract
+
+The advances in video capture, storage and sharing technologies have caused a high demand in techniques for automatic recognition of humans actions. Among the main applications, we can highlight surveillance in public places, detection of falls in the elderly, no-checkout-required stores (Amazon Go), self-driving car, inappropriate content posted on the Internet, etc. The automatic recognition of human actions in videos is a challenging task because in order to obtain a good result one has to work with spatial information (e.g., shapes found in a single frame) and temporal information (e.g., movements found across frames). In this work, we present a simple methodology for describing human actions in videos that use extracted data from 2-Dimensional poses. The experimental results show that the proposed technique can encode spatial and temporal information, obtaining competitive accuracy rates compared to state-of-the-art methods.
+
+
 If you find this work helpful for your research, please cite our following paper:
 
 M. Varges and A. N. Marana. **Human Action Recognition using 2D Poses.** 8th Brazilian Conference on Intelligent Systems (BRACIS), 2019.
