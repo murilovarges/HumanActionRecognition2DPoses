@@ -2,7 +2,7 @@
 
 [[Research Group Page](http://recogna.tech/)] [[Paper Link](https://scholar.google.com.br/citations?user=aMgln1gAAAAJ&hl=en)]
 
-![architeture_har2dposes](https://raw.githubusercontent.com/murilovarges/HumanActionRecognition2DPoses/master/architeture_har2dposes.png)
+![architeture_har](https://raw.githubusercontent.com/murilovarges/HumanActionRecognition2DPoses/master/architeture_har.png)
 
 If you find this work helpful for your research, please cite our following paper:
 
