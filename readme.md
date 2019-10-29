@@ -1,6 +1,6 @@
 # Human Action Recognition using 2D Poses
 
-[[Research Group Page](http://recogna.tech/)] [[Paper Link](https://scholar.google.com.br/citations?user=aMgln1gAAAAJ&hl=en)] Available soon
+[[Research Group Page](http://recogna.tech/)] [[Paper Link](Human Action Recognition using 2D Poses.pdf)] Available soon
 
 <h5>This repository presents a new method based spatiotemporal features to perform Human Action Recognition from videos.</h5> 
 
