@@ -46,6 +46,6 @@ python tools/FeaturesExtraction/compute_trajectory_from_body_parts.py \
 ```
 
 
-##Next
+## Next
 As next step follow the link:
 [Human Action Recognition](classification.md)
