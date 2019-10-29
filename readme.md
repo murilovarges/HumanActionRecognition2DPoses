@@ -1,4 +1,4 @@
-# Human Action Recognition using 2D Poses (HAR2dPoses)
+# Human Action Recognition using 2D Poses
 
 [[Research Group Page](http://recogna.tech/)] [[Paper Link](https://scholar.google.com.br/citations?user=aMgln1gAAAAJ&hl=en)] Available soon
 
