@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: cv2wrap
+Version: 1.0
+Summary: Wrapper for python opencv 2.4.12 32bit
+Home-page: https://github.com/lucasolivier/cv2wrap
+Author: Lucas V. Oliveira
+Author-email: lucas.o@live.com
+License: UNKNOWN
+Download-URL: https://github.com/lucasolivier/cv2wrap/tarball/1.0
+Description: UNKNOWN
+Keywords: opencv,cv2,python
+Platform: UNKNOWN

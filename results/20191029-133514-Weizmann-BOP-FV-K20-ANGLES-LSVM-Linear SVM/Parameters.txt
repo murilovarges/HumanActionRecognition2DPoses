@@ -1,0 +1,13 @@
+Parameters
+Test Name: Weizmann-BOP-FV-K20-ANGLES-LSVM
+Base Path: /home/murilo/dataset/Weizmann/Angles_from_2DPoses
+Base Path2: None
+Train Path: None
+Test Path: None
+Label Path: /home/murilo/dataset/Weizmann/class_names.txt
+Scaler Cluster Type: ScalerType.StandardScaler
+Scaler Type: ScalerType.StandardScaler
+k: 20
+Nr. Samples: None
+Classifier Parameters
+None

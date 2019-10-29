@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76de5902-999c-4ea5-bd70-fef2c9916b94" name="Default" comment="Review of experiments and source code cleanup.">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanActionRecognitionUsing2DPoses.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/architeture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/KTH/class_names.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/Weizmann/class_names.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190507-211604-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-ANGLES-LSVM-Linear SVM/ConfusionNonNormalizedVideo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190507-211604-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-ANGLES-LSVM-Linear SVM/ConfusionNormalizedVideo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190507-211604-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-ANGLES-LSVM-Linear SVM/Parameters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190507-211604-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-ANGLES-LSVM-Linear SVM/Results.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190507-211604-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-ANGLES-LSVM-Linear SVM/cnf_matrix_video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190507-211604-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-ANGLES-LSVM-Linear SVM/results_video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-012040-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-TRAJECTORY-LSVM-Linear SVM/ConfusionNonNormalizedVideo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-012040-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-TRAJECTORY-LSVM-Linear SVM/ConfusionNormalizedVideo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-012040-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-TRAJECTORY-LSVM-Linear SVM/Parameters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-012040-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-TRAJECTORY-LSVM-Linear SVM/Results.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-012040-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-TRAJECTORY-LSVM-Linear SVM/cnf_matrix_video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-012040-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-TRAJECTORY-LSVM-Linear SVM/results_video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-120423-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-FUSION-LSVM/ConfusionNonNormalizedVideo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-120423-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-FUSION-LSVM/ConfusionNormalizedVideo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-120423-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-FUSION-LSVM/Parameters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-120423-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-FUSION-LSVM/Results.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-120423-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-FUSION-LSVM/cnf_matrix_video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-120423-KTH-LOOCV-FV-K20-ONLYPERSON-CARTESIAN-FUSION-LSVM/results_video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-152804-WEIZMANN-LOOCV-FV-K20-CARTESIAN-ANGLES-LSVM-Linear SVM/ConfusionNonNormalizedVideo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-152804-WEIZMANN-LOOCV-FV-K20-CARTESIAN-ANGLES-LSVM-Linear SVM/ConfusionNormalizedVideo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-152804-WEIZMANN-LOOCV-FV-K20-CARTESIAN-ANGLES-LSVM-Linear SVM/Parameters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-152804-WEIZMANN-LOOCV-FV-K20-CARTESIAN-ANGLES-LSVM-Linear SVM/Results.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-152804-WEIZMANN-LOOCV-FV-K20-CARTESIAN-ANGLES-LSVM-Linear SVM/cnf_matrix_video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-152804-WEIZMANN-LOOCV-FV-K20-CARTESIAN-ANGLES-LSVM-Linear SVM/results_video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-154749-WEIZMANN-LOOCV-FV-K20-CARTESIAN-TRAJECTORY-LSVM-Linear SVM/ConfusionNonNormalizedVideo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-154749-WEIZMANN-LOOCV-FV-K20-CARTESIAN-TRAJECTORY-LSVM-Linear SVM/ConfusionNormalizedVideo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-154749-WEIZMANN-LOOCV-FV-K20-CARTESIAN-TRAJECTORY-LSVM-Linear SVM/Parameters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-154749-WEIZMANN-LOOCV-FV-K20-CARTESIAN-TRAJECTORY-LSVM-Linear SVM/Results.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-154749-WEIZMANN-LOOCV-FV-K20-CARTESIAN-TRAJECTORY-LSVM-Linear SVM/cnf_matrix_video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-154749-WEIZMANN-LOOCV-FV-K20-CARTESIAN-TRAJECTORY-LSVM-Linear SVM/results_video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-155452-WEIZMANN-LOOCV-FV-K20-CARTESIAN-FUSION-LSVM/ConfusionNonNormalizedVideo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-155452-WEIZMANN-LOOCV-FV-K20-CARTESIAN-FUSION-LSVM/ConfusionNormalizedVideo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-155452-WEIZMANN-LOOCV-FV-K20-CARTESIAN-FUSION-LSVM/Parameters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-155452-WEIZMANN-LOOCV-FV-K20-CARTESIAN-FUSION-LSVM/Results.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-155452-WEIZMANN-LOOCV-FV-K20-CARTESIAN-FUSION-LSVM/cnf_matrix_video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/20190508-155452-WEIZMANN-LOOCV-FV-K20-CARTESIAN-FUSION-LSVM/results_video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/kth_run_classification_fv_cartesian.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/kth_run_feature_extraction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/weizmann_run_classification_fv_cartesian.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/weizmann_run_feature_extraction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/weizmann_run_tsne.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/2DPosesExtraction/extract_2DPoses_Openpose.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/Classification/Classifier.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/Classification/EnumTypes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/Classification/FisherVector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/Classification/Helpers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/Classification/MainHumanActionClassification.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/Classification/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/FeaturesExtraction/Enumerators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/FeaturesExtraction/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/FeaturesExtraction/compute_angles_from_body_parts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/FeaturesExtraction/compute_trajectory_from_body_parts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/Visualization/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/Visualization/tsne.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/2DPoses_extraction.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/classification.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/features_extraction.md" beforeDir="false" />
+    </list>
+    <ignored path="results/" />
+    <ignored path="scripts/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="classification.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorials/classification.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="468">
+                <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="features_extraction.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorials/features_extraction.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="715">
+                <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="285">
+                <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/results/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="2DPoses_extraction.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorials/2DPoses_extraction.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="696">
+                <caret line="60" column="3" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>postu</find>
+      <find>stride</find>
+      <find>murilo.va</find>
+      <find>getLabelsFromFile</find>
+      <find>3d</find>
+      <find>getFilesFromDirectoryLOOCV_BOW</find>
+      <find>power_normalize</find>
+      <find>trainModelFV_LOOCV_Classifiers</find>
+      <find>trainModelFV_LOOCV_Fusion</find>
+      <find>self.images</find>
+      <find>count</find>
+      <find>trainImage</find>
+      <find>self.files</find>
+      <find>send_email_start</find>
+      <find>use_train_test_val</find>
+      <find>descriptor_vstack</find>
+      <find>saveResults</find>
+      <find>tools</find>
+      <find>pandas</find>
+      <find>im_he</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/tools/2DPosesExtraction/extract_2DPoses_Openpose.py" />
+        <option value="$PROJECT_DIR$/tools/FeaturesExtraction/compute_angles_from_body_parts.py" />
+        <option value="$PROJECT_DIR$/tools/FeaturesExtraction/compute_trajectory_from_body_parts.py" />
+        <option value="$PROJECT_DIR$/tools/Classification/MainHumanActionClassification.py" />
+        <option value="$PROJECT_DIR$/tools/Classification/Helpers.py" />
+        <option value="$PROJECT_DIR$/tutorials/classification.md" />
+        <option value="$PROJECT_DIR$/tools/Classification/Classifier.py" />
+        <option value="$PROJECT_DIR$/tools/Classification/FisherVector.py" />
+        <option value="$PROJECT_DIR$/tutorials/2DPoses_extraction.md" />
+        <option value="$PROJECT_DIR$/tutorials/features_extraction.md" />
+        <option value="$PROJECT_DIR$/readme.md" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="899" />
+    <option name="y" value="88" />
+    <option name="width" value="1014" />
+    <option name="height" value="956" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="HumanActionRecognition2DPoses" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HumanActionRecognition2DPoses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HumanActionRecognition2DPoses" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HumanActionRecognition2DPoses" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scripts" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tools" />
+      <recent name="$PROJECT_DIR$/tools/FeaturesExtraction" />
+      <recent name="$PROJECT_DIR$/tutorials" />
+      <recent name="$PROJECT_DIR$/tutorials" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.MainHumanActionClassification">
+    <configuration name="MainHumanActionClassification" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HumanActionRecognition2DPoses" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/Classification" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/Classification/MainHumanActionClassification.py" />
+      <option name="PARAMETERS" value="--test_name=Weizmann-BOP-FV-K20-FUSION-LSVM --base_path=$USER_HOME$/dataset/Weizmann/Angles_from_2DPoses --base_path2=$USER_HOME$/dataset/Weizmann/Trajectories_from_2DPoses --label_path=$USER_HOME$/dataset/Weizmann/class_names.txt" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="extract_2DPoses_Openpose" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HumanActionRecognition2DPoses" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/2DPosesExtraction" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/2DPosesExtraction/extract_2DPoses_Openpose.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.extract_2DPoses_Openpose" />
+      <item itemvalue="Python.MainHumanActionClassification" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.MainHumanActionClassification" />
+        <item itemvalue="Python.extract_2DPoses_Openpose" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76de5902-999c-4ea5-bd70-fef2c9916b94" name="Default" comment="" />
+      <created>1562784290623</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562784290623</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Add readme.">
+      <created>1562785376104</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1562785376104</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add readme.">
+      <created>1562785556377</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1562785556377</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add readme.">
+      <created>1562787729702</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562787729702</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add readme.">
+      <created>1562788641720</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1562788641720</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add readme.">
+      <created>1562788697702</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1562788697702</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add readme.">
+      <created>1562790538507</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1562790538507</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add readme.">
+      <created>1562791060412</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1562791060412</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add readme.">
+      <created>1562791222921</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1562791222921</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add readme.">
+      <created>1562791372348</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1562791372348</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add readme.">
+      <created>1562791465418</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1562791465418</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add readme.">
+      <created>1562793174342</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1562793174342</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Review of experiments and source code cleanup.">
+      <created>1572366860864</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1572366860864</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Review of experiments and source code cleanup.">
+      <created>1572375019573</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1572375019573</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Review of experiments and source code cleanup.">
+      <created>1572377341114</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1572377341114</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Review of experiments and source code cleanup.">
+      <created>1572377372674</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1572377372674</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Review of experiments and source code cleanup.">
+      <created>1572377573985</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1572377573985</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Review of experiments and source code cleanup.">
+      <created>1572377870200</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1572377870200</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Review of experiments and source code cleanup.">
+      <created>1572378056095</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1572378056095</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2139738" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32948583" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35152152" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32948583" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39979014" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="Add readme." />
+    <MESSAGE value="Review of experiments and source code cleanup." />
+    <option name="LAST_COMMIT_MESSAGE" value="Review of experiments and source code cleanup." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/Classification/Classifier.py</url>
+          <line>268</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/Classification/Classifier.py</url>
+          <line>265</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/Classification/Classifier.py</url>
+          <line>335</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/Classification/Classifier.py</url>
+          <line>100</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/Classification/Classifier.py</url>
+          <line>338</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/Classification/Classifier.py</url>
+          <line>243</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/Classification/Classifier.py</url>
+          <line>219</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/Classification/Classifier.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="10" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="os.path.splitext(os.path.basename(file))" language="Python" />
+        <watch expression="os.path.normpath(file)" language="Python" />
+        <watch expression="os.path.basename(os.path.dirname(file))" language="Python" />
+        <watch expression="self.classifier_helper.descriptor_vstack" language="Python" />
+        <watch expression="self.descriptor_list" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>self.descriptor_list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.classifier_helper.descriptor_vstack</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>os.path.basename(os.path.dirname(file))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>os.path.basename(
+    os.path.dirname(file)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>os.path.dirname(file)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>os.path.normpath(file)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>os.path.basename(os.path.normpath(file))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>os.path.basename(os.path.normpath('/folderA/folderB/folderC/folderD/')) 'folderD'</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>os.path.splitext(os.path.basename(file))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tutorials/classification.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="836">
+            <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="41" selection-start-column="41" selection-end-column="41" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/2DPosesExtraction/extract_2DPoses_Openpose.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/features_extraction.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/FeaturesExtraction/compute_trajectory_from_body_parts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2147">
+          <caret line="113" column="30" selection-start-line="113" selection-start-column="30" selection-end-line="113" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/classification.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/2DPoses_extraction.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="950">
+            <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/kth_run_feature_extraction.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="1" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/2DPosesExtraction/extract_2DPoses_Openpose.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/features_extraction.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/FeaturesExtraction/compute_trajectory_from_body_parts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2071">
+          <caret line="113" column="30" selection-start-line="113" selection-start-column="30" selection-end-line="113" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/classification.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/2DPoses_extraction.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="950">
+            <caret line="50" column="41" lean-forward="true" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/kth_run_feature_extraction.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="1" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/features_extraction.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/FeaturesExtraction/compute_trajectory_from_body_parts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2071">
+          <caret line="113" column="30" selection-start-line="113" selection-start-column="30" selection-end-line="113" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/classification.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/kth_run_feature_extraction.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="1" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/2DPoses_extraction.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/features_extraction.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/FeaturesExtraction/compute_trajectory_from_body_parts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2071">
+          <caret line="113" column="30" lean-forward="true" selection-start-line="113" selection-start-column="30" selection-end-line="113" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/2DPoses_extraction.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/kth_run_feature_extraction.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="1" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/classification.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/kth_run_feature_extraction.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="1" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/FeaturesExtraction/Enumerators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/FeaturesExtraction/compute_angles_from_body_parts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/FeaturesExtraction/compute_trajectory_from_body_parts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="38" column="81" selection-start-line="38" selection-start-column="81" selection-end-line="38" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/Visualization/tsne.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2501" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/2DPosesExtraction/extract_2DPoses_Openpose.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/Classification/Classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#1#11#0" expanded="true" />
+            <element signature="e#1486#2573#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/Classification/FisherVector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1448">
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/Classification/MainHumanActionClassification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/statsmodels/tsa/vector_ar/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/Classification/Helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="1" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/2DPoses_extraction.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="696">
+            <caret line="60" column="3" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/classification.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="468">
+            <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/features_extraction.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="715">
+            <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>
