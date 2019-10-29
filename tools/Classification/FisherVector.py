@@ -1,5 +1,4 @@
 import numpy as np
-
 from sklearn.datasets import make_classification
 from sklearn.mixture import GMM
 from sklearn.preprocessing import StandardScaler

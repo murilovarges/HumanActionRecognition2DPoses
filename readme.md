@@ -20,18 +20,34 @@ M. Varges and A. N. Marana. **Human Action Recognition using 2D Poses.** 8th Bra
 @inproceedings{har2dposes_bracis2019,
     title = {Human Action Recognition using 2D Poses},
     author = {Murilo Varges da Silva and Aparecido Nilceu Marana.},
-    booktitle = {Brazilian Conference on Intelligent Systems (BRACIS)},
-    year = 2019
+    booktitle = {2019 8th Brazilian Conference on Intelligent Systems (BRACIS)},
+    year = {2019},
+    keywords={Human action recognition; Surveillance systems; Spatio-temporal features; Videos sequences},
 }
 ```
 If you have any question or feedback about the code, please contact: murilo.varges@gmail.com.
 
 ## Requirements
-HAR2dPoses requires the following dependencies:
-* [OpenPose Framework](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
-* [Scikit Learn](https://scikit-learn.org/stable/)
 
+To run this project you will need to install the follows softwares:
+* [OpenPose Framework](https://github.com/CMU-Perceptual-Computing-Lab/openpose) (Optional)
+* Python version 3.6 or higher
 
+This project requires the following dependencies:
+
+```
+matplotlib==2.2.2
+numpy==1.15.0
+pandas==0.22.0
+seaborn==0.9.0
+Tools==0.1.9
+scikit_learn==0.21.3
+```
+
+Install the requirements with command:
+```
+pip install -r requirements.txt
+```
 ## Tutorials
 We provide some basic tutorials for you to get familar with the code and tools.
 1. [2D Poses Extraction](tutorials/2DPoses_extraction.md)
@@ -41,7 +57,7 @@ We provide some basic tutorials for you to get familar with the code and tools.
 
 
 ## License
-HAR2dPoses is Apache 2.0 licensed, as found in the LICENSE file.
+This project is Apache 2.0 licensed, as found in the LICENSE file.
 
 ### Acknowledgements
 We thank NVIDIA Corporation for the donation of the GPU used in this study. This study was financed in part by CAPES - Brazil (Finance Code 001).
