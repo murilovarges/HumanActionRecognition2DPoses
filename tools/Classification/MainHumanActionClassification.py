@@ -1,13 +1,8 @@
 import argparse
 import datetime
-import os
 import platform
-from sklearn.neural_network import MLPClassifier
 from Classifier import Classifier
 from sklearn.svm import LinearSVC
-from sklearn.svm import SVC
-from PukKernel import PukKernel
-from EnumTypes import ScalerType
 import warnings
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
@@ -16,7 +11,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Compute trajectory features from OpenPose points to Human Action Recognition"
+        description="Perform Human Action Recognition"
     )
 
     parser.add_argument("--test_name", type=str, required=True,
@@ -44,7 +39,7 @@ def main():
                         help="C parameter for SVM classifier.")
 
     parser.add_argument("--use_train_test_val", type=int,
-                        default=1,
+                        default=0,
                         help="True if dataset is divides into train/test/validation.")
 
     args = parser.parse_args()

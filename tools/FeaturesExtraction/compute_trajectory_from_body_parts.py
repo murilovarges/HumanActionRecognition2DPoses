@@ -6,7 +6,7 @@ import numpy as np
 
 
 def compute_features_trajectories(args):
-    for root, directories, filenames in os.walk(os.path.join(args.points_base_dir, args.input_dir)):
+    for root, directories, filenames in os.walk(os.path.join(args.poses_base_dir, args.input_dir)):
         for directory in directories:
             video_dir = os.path.join(root, directory)
             print(video_dir)
@@ -17,7 +17,7 @@ def compute_features_trajectories(args):
                     if x + args.number_frames < len(frames):
                         features = np.zeros(shape=(15, args.number_frames, 2))
                         prev_body_parts = None
-                        for y in range(x, x + args.number_frames+1):
+                        for y in range(x, x + args.number_frames + 1):
                             body_parts = read_body_parts_file(frames[y])
                             if prev_body_parts is None:
                                 prev_body_parts = body_parts
@@ -25,7 +25,7 @@ def compute_features_trajectories(args):
                                 diffs = compute_displacement(prev_body_parts, body_parts)
                                 idx = (y - 1) - x
                                 for a in range(15):
-                                    features[a,idx] = diffs[a]
+                                    features[a, idx] = diffs[a]
 
                         # Here normalize
                         for y in range(15):
@@ -46,11 +46,11 @@ def compute_features_trajectories(args):
 
 
 def compute_displacement(prev_body_parts, body_parts):
-    diffs = np.zeros(shape=(15,2))
+    diffs = np.zeros(shape=(15, 2))
     for x in range(15):
         x1, y1 = get_max_prob(prev_body_parts[x])
         x2, y2 = get_max_prob(body_parts[x])
-        diffs[x,:] = (x2 - x1, y2 - y1)
+        diffs[x, :] = (x2 - x1, y2 - y1)
 
     return diffs
 
@@ -89,23 +89,22 @@ def main():
         description="Compute trajectory features from OpenPose points to Human Action Recognition"
     )
 
-    parser.add_argument("--points_base_dir", type=str,
-                        #default='/home/murilo/dataset/KTH',
+    parser.add_argument("--poses_base_dir", type=str,
+                        # default='/home/murilo/dataset/KTH',
                         default='/home/murilo/dataset/Weizmann',
                         help="Name of directory where input points are located.")
 
     parser.add_argument("--input_dir", type=str,
-                        #default='VideosTrainValidationTest_OP_PartKeys',
-                        default='Videos_OP_PartKeys_Person',
+                        default='2DPoses',
                         help="Name of directory to output computed features.")
 
     parser.add_argument("--output_dir", type=str,
-                        default='Videos_trajectory_person_l20_s10_all',
+                        default='Trajectories_from_2DPoses',
                         help="Name of directory to output computed features.")
 
     parser.add_argument("--number_frames", type=int,
                         default=20,
-                        help="Number of frames to extract features.")
+                        help="Number of frames to consider to extract trajectories features.")
 
     parser.add_argument("--stride", type=int,
                         default=10,

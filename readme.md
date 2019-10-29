@@ -1,7 +1,10 @@
 # Human Action Recognition using 2D Poses (HAR2dPoses)
 
-[[Research Group Page](http://recogna.tech/)] [[Paper Link](https://scholar.google.com.br/citations?user=aMgln1gAAAAJ&hl=en)]
+[[Research Group Page](http://recogna.tech/)] [[Paper Link](https://scholar.google.com.br/citations?user=aMgln1gAAAAJ&hl=en)] Available soon
 
+<h5>This repository presents a new method based spatiotemporal features to perform Human Action Recognition from videos.</h5> 
+
+Ilustration of architeture of proposed method:
 ![architeture_har](https://raw.githubusercontent.com/murilovarges/HumanActionRecognition2DPoses/master/architeture.png)
 
 ## Abstract
@@ -31,11 +34,10 @@ HAR2dPoses requires the following dependencies:
 
 ## Tutorials
 We provide some basic tutorials for you to get familar with the code and tools.
-* [2D Poses Extraction](tutorials/2DPoses_extraction.md)
-* [Features Extraction](tutorials/features_extraction.md)
-* [Human Action Classification](tutorials/classification.md)
-* [Features Embedding Visualization](tutorials/visualization.md)
-* [Download 2D poses](tutorials/2DPoses.md)
+1. [2D Poses Extraction](tutorials/2DPoses_extraction.md)
+2. [Features Extraction](tutorials/features_extraction.md)
+3. [Human Action Recognition](tutorials/classification.md)
+4. [Features Embedding Visualization](tutorials/visualization.md)
 
 
 ## License

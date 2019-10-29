@@ -10,7 +10,6 @@ POSE_BODY_25_PAIRS_RENDER_GPU = \
     [1, 8, 1, 2, 1, 5, 2, 3, 3, 4, 5, 6, 6, 7, 8, 9, 9, 10, 10, 11,
      8, 12, 12, 13, 13, 14, 1, 0, 0, 15, 15, 17, 0, 16, 16, 18, 14,
      19, 19, 20, 14, 21, 11, 22, 22, 23, 11, 24]
-# BodyStraight.Upper_body.value, BodyStraight.Neck.value,
 
 POSE_BODY_14_PAIRS = \
     [BodyStraight.Upper_body.value, BodyStraight.Left_shoulder.value,
@@ -30,7 +29,8 @@ POSE_BODY_14_PAIRS = \
 
 
 def compute_angles_from_body_parts(args):
-    for root, directories, filenames in os.walk(os.path.join(args.points_base_dir, args.input_dir)):
+    print(os.path.join(args.poses_base_dir, args.input_dir))
+    for root, directories, filenames in os.walk(os.path.join(args.poses_base_dir, args.input_dir)):
         for directory in directories:
             video_dir = os.path.join(root, directory)
             print(video_dir)
@@ -209,25 +209,17 @@ def main():
         description="Compute features from Hough Points to Human Action Recognition"
     )
 
-    parser.add_argument("--points_base_dir", type=str,
+    parser.add_argument("--poses_base_dir", type=str,
                         default='/home/murilo/dataset/Weizmann',
                         help="Name of directory where input points are located.")
 
     parser.add_argument("--input_dir", type=str,
-                        default='Videos_OP_PartKeys_Person',
+                        default='2DPoses',
                         help="Name of directory to output computed features.")
 
     parser.add_argument("--output_dir", type=str,
-                        default='Videos_Hough_Features_BAS_BOW_diff_person',
+                        default='Angles_from_2DPoses',
                         help="Name of directory to output computed features.")
-
-    parser.add_argument("--number_frames", type=int,
-                        default=30,
-                        help="Number of frames to extract features.")
-
-    parser.add_argument("--stride", type=int,
-                        default=1,
-                        help="Stride to compute features from the frames.")
 
     args = parser.parse_args()
 
