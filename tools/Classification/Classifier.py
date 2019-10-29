@@ -110,7 +110,7 @@ class Classifier:
 
             for feature in features_nd2[train]:
                 feature = feature[0]
-                des2 = self.im_helper.featuresVideoSIFT3D(feature)
+                des2 = self.file_helper.formatFeatures(feature)
                 self.descriptor_list2.append(des2)
 
             # format data as nd array
@@ -162,7 +162,7 @@ class Classifier:
             lab.extend([self.number_dict[feature_test_file1.split(os.sep)[-2]]])
 
             # test features 1
-            feature_test1 = self.im_helper.featuresVideoSIFT3D(feature_test_file1)
+            feature_test1 = self.file_helper.formatFeatures(feature_test_file1)
             test_fv1 = fisher_vector(feature_test1, gmm1)
             # train normalization
             test_fv1 = test_fv1.reshape(1, -1)
@@ -171,7 +171,7 @@ class Classifier:
             test_fv1 = L2_normalize(test_fv1)
 
             # test features 2
-            feature_test2 = self.im_helper.featuresVideoSIFT3D(feature_test_file2)
+            feature_test2 = self.file_helper.formatFeatures(feature_test_file2)
             test_fv2 = fisher_vector(feature_test2, gmm2)
             # train normalization
             test_fv2 = test_fv2.reshape(1, -1)

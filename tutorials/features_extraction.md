@@ -44,3 +44,8 @@ python tools/FeaturesExtraction/compute_trajectory_from_body_parts.py \
 --output_dir=Trajectories_from_2DPoses \
 --number_frames=20 --stride=1
 ```
+
+
+##Next
+As next step follow the link:
+[Human Action Recognition](classification.md)

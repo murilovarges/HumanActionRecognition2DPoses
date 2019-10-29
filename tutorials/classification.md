@@ -55,7 +55,7 @@ Weizmann dataset example:
 ```
 python tools/Classification/MainHumanActionClassification.py \
 --test_name=Weizmann-BOP-FV-K20-FUSION-LSVM \
---base_path=/home/murilo/dataset/WeizmannAngles_from_2DPoses \
+--base_path=/home/murilo/dataset/Weizmann/Angles_from_2DPoses \
 --base_path2=/home/murilo/dataset/Weizmann/Trajectories_from_2DPoses \
 --label_path=/home/murilo/dataset/Weizmann/class_names.txt
 ```

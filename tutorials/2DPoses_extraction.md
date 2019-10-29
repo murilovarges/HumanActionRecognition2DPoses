@@ -1,4 +1,4 @@
-# Tutorial 1: 2D Poses extraction
+# Tutorial 1: 2D Poses Extraction
 
 This tutorial will help you, step-by-step, how to extract 2D Poses using Openpose framework.
 
@@ -36,6 +36,7 @@ In this example, we assume that you would to extract 2D poses from the videos as
 
 
 ## Extracting 2D Poses using Openpose
+
 In this example, we will extract 2D poses for the above-mentioned **KTH dataset** videos.
 
 
@@ -55,4 +56,9 @@ python tools/2DPosesExtraction/extract_2DPoses_Openpose.py \
 --open_pose_base_dir=/home/murilo/openpose \
 --poses_base_dir=/home/murilo/dataset/Weizmann/2DPoses
 ```
+
+
+##Next
+As next step follow the link:
+[Features Extraction](features_extraction.md)
 
