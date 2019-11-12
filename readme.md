@@ -40,7 +40,6 @@ matplotlib==2.2.2
 numpy==1.15.0
 pandas==0.22.0
 seaborn==0.9.0
-Tools==0.1.9
 scikit_learn==0.21.3
 ```
 
@@ -53,7 +52,7 @@ We provide some basic tutorials for you to get familar with the code and tools.
 1. [2D Poses Extraction](tutorials/2DPoses_extraction.md)
 2. [Features Extraction](tutorials/features_extraction.md)
 3. [Human Action Recognition](tutorials/classification.md)
-4. [Features Embedding Visualization](tutorials/visualization.md)
+4. [Features Embedding Visualization](tutorials/features_visualization.md)
 
 
 ## License

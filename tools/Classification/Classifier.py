@@ -283,9 +283,10 @@ class Classifier:
 
             print(features.shape)
             print('Data normalization.')
-            #scaler = StandardScaler()
+            scaler = StandardScaler()
+            print('DN here')
             # train normalization
-            #features = scaler.fit_transform(features)
+            features = scaler.fit_transform(features)
             features = power_normalize(features, 0.5)
             features = L2_normalize(features)
 
@@ -297,7 +298,7 @@ class Classifier:
             test_fv = fisher_vector(feature_test, gmm)
             # test normalization
             test_fv = test_fv.reshape(1, -1)
-            #test_fv = scaler.transform(test_fv)
+            test_fv = scaler.transform(test_fv)
             test_fv = power_normalize(test_fv, 0.5)
             test_fv = L2_normalize(test_fv)
 
@@ -464,5 +465,90 @@ class Classifier:
         file.write(self.parameters)
         file.close()
 
-    def print_vars(self):
-        pass
+    def build_FV_Features(self, extension='*.*'):
+        """
+        This method contains the entire module
+        to compute features for all dataset data
+        for Visualization plot propose.
+        """
+        self.name_dict, self.number_dict, self.count_class = self.file_helper.getLabelsFromFile(self.label_path)
+
+        # read file. prepare file lists.
+        self.files1, self.filesCount1 = self.file_helper.getFilesFromDirectory(self.base_path,
+                                                                               self.datasets,
+                                                                               extension)
+        self.files2, self.filesCount2 = self.file_helper.getFilesFromDirectory(self.base_path2,
+                                                                               self.datasets,
+                                                                               extension)
+
+        features_nd1 = np.asarray(self.files1)
+        features_nd2 = np.asarray(self.files2)
+        features_nd1.sort(axis=0)
+        features_nd2.sort(axis=0)
+
+        labels_train = []
+        self.descriptor_list1 = []
+        self.descriptor_list2 = []
+
+        for feature in features_nd1:
+            feature = feature[0]
+            label_number = self.number_dict[feature.split(os.sep)[-2]]
+            label_name = self.name_dict[str(label_number)]
+            labels_train = np.append(labels_train, label_name)
+            des1 = self.file_helper.formatFeatures(feature)
+            self.descriptor_list1.append(des1)
+
+        for feature in features_nd2:
+            feature = feature[0]
+            des2 = self.file_helper.formatFeatures(feature)
+            self.descriptor_list2.append(des2)
+
+        # format data as nd array
+        ft1 = self.classifier_helper.formatND(self.descriptor_list1)
+        ft2 = self.classifier_helper.formatND(self.descriptor_list2)
+
+        gmm1 = GMM(n_components=self.no_clusters, covariance_type='diag', verbose=0)
+        gmm1.fit(ft1)
+
+        gmm2 = GMM(n_components=self.no_clusters, covariance_type='diag', verbose=0)
+        gmm2.fit(ft2)
+
+        fv_dim1 = self.no_clusters + 2 * self.no_clusters * ft1.shape[1]
+        fv_dim2 = self.no_clusters + 2 * self.no_clusters * ft2.shape[1]
+        print(fv_dim1, fv_dim2)
+        n_videos = features_nd1.shape[0]
+        features1 = np.array([np.zeros(fv_dim1) for i in range(n_videos)])
+        features2 = np.array([np.zeros(fv_dim2) for i in range(n_videos)])
+        count1 = 0
+        count2 = 0
+        for i in range(n_videos):
+            len_video1 = len(self.descriptor_list1[i])
+            fv1 = fisher_vector(ft1[count1:count1 + len_video1], gmm1)
+            features1[i] = fv1
+            count1 += len_video1
+
+            len_video2 = len(self.descriptor_list2[i])
+            fv2 = fisher_vector(ft2[count2:count2 + len_video2], gmm2)
+            features2[i] = fv2
+            count2 += len_video2
+
+        print(features1.shape)
+        print('Data normalization. 1')
+        scaler1 = StandardScaler()
+        # train normalization
+        features1 = scaler1.fit_transform(features1)
+        features1 = power_normalize(features1, 0.5)
+        features1 = L2_normalize(features1)
+
+        print(features2.shape)
+        print('Data normalization. 2')
+        scaler2 = StandardScaler()
+        # train normalization
+        features2 = scaler2.fit_transform(features2)
+        features2 = power_normalize(features2, 0.5)
+        features2 = L2_normalize(features2)
+
+        # concatenate two fv train
+        features_train = np.concatenate((features1, features2), axis=1)
+
+        return features_train, labels_train

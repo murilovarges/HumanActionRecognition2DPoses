@@ -1,4 +1,4 @@
-# Tutorial 2: Features extraction
+# Tutorial 2: Features Extraction
 
 This tutorial will help you, step-by-step, how to extract features (Angles and Trajectories) from 2D Poses.
 
@@ -15,7 +15,7 @@ KTH dataset example:
 ```
 python tools/FeaturesExtraction/compute_angles_from_body_parts.py \
 --poses_base_dir=/home/murilo/dataset/KTH \
---input_dir=2DPoses \
+--input_dir=2DPoses_Person \
 --output_dir=Angles_from_2DPoses
 ```
 Weizmann dataset example:
@@ -31,7 +31,7 @@ KTH dataset example:
 ```
 python tools/FeaturesExtraction/compute_trajectory_from_body_parts.py \
 --poses_base_dir=/home/murilo/dataset/KTH \
---input_dir=2DPoses \
+--input_dir=2DPoses_Person \
 --output_dir=Trajectories_from_2DPoses \
 --number_frames=20 --stride=10
 ```

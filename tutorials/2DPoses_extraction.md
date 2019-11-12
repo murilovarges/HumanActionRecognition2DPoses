@@ -6,8 +6,9 @@ Before proceeding make sure that you have already installed the Openpose framewo
 
 Links to download 2D poses:
 
-- :link: [KTH      2D poses (About 200mb)](https://1drv.ms/u/s!Ah7VRrgHtdpMioVejcyyNKfYAwLdeg?e=qAM3Zz) 
-- :link: [Weizmann 2D poses (About   5mb)](https://1drv.ms/u/s!Ah7VRrgHtdpMioVfbsxNLZQx84noTg?e=yMHeLr)   
+- :link: [KTH 2D poses - All video frames (About 200mb)](https://1drv.ms/u/s!Ah7VRrgHtdpMioVejcyyNKfYAwLdeg?e=w2qhxV) 
+- :link: [KTH 2D poses - Only frames with person (About 130mb)](https://1drv.ms/u/s!Ah7VRrgHtdpMio8FUjhBk85Be-L-uQ?e=VJBWDB)
+- :link: [Weizmann 2D poses - All video frames (About   5mb)](https://1drv.ms/u/s!Ah7VRrgHtdpMioVfbsxNLZQx84noTg?e=GKziIl)   
 
 Experiments were performed in two public dataset [KTH](http://www.nada.kth.se/cvap/actions/) and [Weizmann](http://www.wisdom.weizmann.ac.il/~vision/SpaceTimeActions.html).
 
@@ -57,6 +58,16 @@ python tools/2DPosesExtraction/extract_2DPoses_Openpose.py \
 --poses_base_dir=/home/murilo/dataset/Weizmann/2DPoses
 ```
 
+## Processing 2D Poses using Openpose
+
+In this example, since the KTH dataset contains frames without people, we will process 2D poses to consider only files where at least a person was detected.
+
+```
+python tools/2DPosesExtraction/process_2DPoses_Openpose.py \
+--poses_base_dir=/home/murilo/dataset/KTH \
+--input_dir=2DPoses \
+--output_dir=2DPoses_Person
+```
 
 ## Next
 As next step follow the link:

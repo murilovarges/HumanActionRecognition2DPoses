@@ -9,6 +9,10 @@ Experiments were performed in two public datasets [KTH](http://www.nada.kth.se/c
 
 In this example, we will perform classification using extracted features from 2D poses by running the following scripts.
 
+After running these scripts the results will be printed in screen (Accuracy and Confusion Matrix) as well as the results will be written in the results directory (Accuracy, Confusion Matrix and the result of classification for each video).
+
+**Note:** Since in the process of creating the vocabulary of poses using the Gaussian Mixture Model (GMM) there is the parameter "random_state" that is used as a seed by the random number generator, the results may differ slightly from the results presented in the article.
+
 ## Classification Using Only Angles Features
 KTH dataset example:
 ```

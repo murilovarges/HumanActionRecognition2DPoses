@@ -1,3 +1,8 @@
+"""
+Description..: From videos extract 2D Poses using OpenPose and write in json files
+Date.........: 21/03/2019
+Author.......: Murilo Varges da Silva
+"""
 import argparse
 import glob
 import os

@@ -1,8 +1,10 @@
+import sys
+sys.path.insert(1, 'tools/Classification')
 import argparse
 from sklearn.manifold import TSNE
-from sklearn.datasets import load_iris
-from Tools.Classification.Helpers import *
-from Tools.Classification.Classifier import *
+from sklearn.decomposition import PCA
+from Classifier import Classifier
+import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 import time
@@ -11,6 +13,7 @@ import platform
 import matplotlib
 import warnings
 
+
 matplotlib.use('Agg')
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
@@ -18,7 +21,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 perplexities = [5, 15, 30, 50, 75, 100]
 
 
-def plotTSNE2(X, y, name, args):
+def plotDataVisualization(X, y, name, args):
     if not os.path.exists(os.path.dirname(args.output_image)):
         try:
             os.makedirs(os.path.dirname(args.outuput_image))
@@ -47,8 +50,8 @@ def plotTSNE2(X, y, name, args):
         palette=sns.color_palette("hls",  n_colors=args.number_classes),
         data=df.loc[::],
         legend="full",
-        s=300,
-        alpha=0.6
+        s=args.mark_size,
+        alpha=args.alpha
     ).set_title('First and Second Principal Components colored by class')
     img_name = os.path.join(args.output_image, name + '_pca.png')
     plt.savefig(img_name)
@@ -72,39 +75,14 @@ def plotTSNE2(X, y, name, args):
             palette=sns.color_palette("hls", args.number_classes),
             data=df_tsne,
             legend="full",
-            s=300,
-            alpha=0.6
+            s=args.mark_size,
+            alpha=args.alpha
         ).set_title('tSNE dimensions colored by class')
         img_name = os.path.join(args.output_image, name + '_tsne_%i.png' % x)
         plt.savefig(img_name)
 
 
-def plotTSNE(features, labels):
-    X_tsne = TSNE(learning_rate=100).fit_transform(features)
-    X_pca = PCA(n_components=50).fit_transform(features)
-
-    plt.figure(figsize=(10, 5))
-    plt.subplot(121)
-    plt.scatter(X_tsne[:, 0], X_tsne[:, 1], c=labels)
-    plt.subplot(122)
-    plt.scatter(X_pca[:, 0], X_pca[:, 1], c=labels)
-    plt.show()
-
-
-def plotTSNEIris():
-    iris = load_iris()
-    X_tsne = TSNE(learning_rate=100).fit_transform(iris.data)
-    X_pca = PCA().fit_transform(iris.data)
-
-    plt.figure(figsize=(10, 5))
-    plt.subplot(121)
-    plt.scatter(X_tsne[:, 0], X_tsne[:, 1], c=iris.target)
-    plt.subplot(122)
-    plt.scatter(X_pca[:, 0], X_pca[:, 1], c=iris.target)
-    plt.show()
-
-
-if __name__ == '__main__':
+def main():
     OsName = platform.system()
     print('Operating System: ', OsName)
 
@@ -139,8 +117,16 @@ if __name__ == '__main__':
                         default=6,
                         help="Number of classes of dataset.")
 
+    parser.add_argument("--mark_size", type=int,
+                        default=100,
+                        help="Size of the points.")
+
+    parser.add_argument("--alpha", type=float,
+                        default=0.6,
+                        help="Proportional opacity of the points.")
+
     parser.add_argument("--use_train_test_val", type=int,
-                        default=1,
+                        default=0,
                         help="True if dataset is divides into train/test/validation.")
 
     args = parser.parse_args()
@@ -152,7 +138,7 @@ if __name__ == '__main__':
     if os.path.isfile(file_name):
         df = pd.read_csv(file_name, index_col=0)
         print(df.head())
-        plotTSNE2(df.drop('label', axis=1).values, df.label.values, 'load_full', args)
+        plotDataVisualization(df.drop('label', axis=1).values, df.label.values, 'load_full', args)
 
     else:
         classifier = Classifier(no_clusters=args.number_cluster)
@@ -163,12 +149,16 @@ if __name__ == '__main__':
         classifier.base_path2 = args.base_path2
         classifier.label_path = args.label_path
 
-        X, y = classifier.FV_LOOCV_Features()
+        X, y = classifier.build_FV_Features()
         df = pd.DataFrame(X, y)
         df = df.reset_index()
         df = df.rename(columns={df.columns[0]: "label"})
         print(df.head())
         df.to_csv(file_name)
 
-        plotTSNE2(df.drop('label', axis=1).values, df.label.values, 'dataframe_full', args)
-        plotTSNE2(X, y, 'ndarray_full', args)
+        plotDataVisualization(df.drop('label', axis=1).values, df.label.values, 'dataframe_full', args)
+        plotDataVisualization(X, y, 'ndarray_full', args)
+
+
+if __name__ == '__main__':
+    main()
